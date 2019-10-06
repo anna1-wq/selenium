@@ -22,9 +22,6 @@ try:
                 sub_menu = browser.find_elements_by_css_selector("[id^=doc-]")
                 sub_menu[i].click()
                 header = browser.find_element_by_tag_name('h1')
-
-
-
     browser.quit()
 finally:
     time.sleep(3)
