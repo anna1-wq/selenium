@@ -21,15 +21,16 @@ for i, links in enumerate(links):
     links[i].click()
     list =browser.window_handles
     last_el =len(list)-1
-    new_window_id= list[last_el]
+    new_window_id = list[last_el]
     browser.switch_to.window(new_window_id)
     if browser.current_window_handle ==new_window_id:
         print("Correct.Old window switched to new Window")
         print(browser.current_window_handle)
+        browser.close()
         browser.switch_to.window(active_window)
     else:
         print("Error")
 browser.quit()
-    
+
 
 
